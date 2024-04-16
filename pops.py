@@ -24,6 +24,6 @@ def read_pop(path, size='water'):
 
     binlab = list(filter(r.search, df.columns))
     for particle_size, each_dlog_bin in zip(binlab, dlog_bin):
-        df[particle_size] = df[particle_size]/(df[' POPS_flow(ccm/s)']*16.6667) / each_dlog_bin
+        df[particle_size] = df[particle_size]/(df[' POPS_flow(ccm/s)']) / each_dlog_bin
 
     return df, midbin
